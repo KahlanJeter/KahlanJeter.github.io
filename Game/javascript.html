@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Test</title>
+</head>
+
+<body>
+    <img src="Screenshot.png" width=200 onclick="addScore()">
+    <div id="scoreBox">0</div>
+    <button onclick="byMulti ()">Buy Upgrade</button>
+    <button onclick="buyAutoclick()">Buy Autoclicker</button>
+</body>
+
+<script>
+    var name = prompt("What is your name?");
+    if (name == "Fahh") {
+        document.write("mi bombo")
+    } else {
+        document.write("Hi " + name + "!");
+    }
+
+    var score = 0;
+    var multiplier = 1.0;
+    var autoclickamount = 0;
+    var scoreBox = document.getElementById("scoreBox");
+
+    function addScore() {
+        score = score + multiplier + autoclickamount;
+        scoreBox.innerHTML = score;
+    }
+    function byMulti() {
+        if (score >= (multiplier * 10)) {
+            score = score - (multiplier * 10)
+            multiplier = multiplier + 0.1;
+            scoreBox.innerHTML = score;
+        }
+    }
+    function buyAutoclick() {
+        if (autoclickamount == 0) {
+            autoclickamount = 1;
+            setInterval(
+                () => {
+                    score = score + autoclickamount;
+                    scoreBox.innerHTML = score;
+                },
+                1000
+            )
+        }
+        else autoclickamount = +1
+        score = score - (autoclickamount * 10)
+        
+    }
+</script>
+
+</html>
