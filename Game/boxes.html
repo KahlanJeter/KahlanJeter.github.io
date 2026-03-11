@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <style>
+        body {
+            background-color: mintcream;
+        }
+
+        div {
+            margin: 10px;
+            padding: 10px;
+            border: 3px solid black;
+        }
+
+        #siteContent {
+            background-color: chocolate;
+            width: 80%;
+            margin: auto;
+            border-style: solid;
+            border-width: 1px 5px 5px 1px;
+        }
+
+        #header {
+            font-size: 2em;
+        }
+
+        #navBar {
+            background-color: peachpuff;
+            flex-direction: row;
+            display:flex;
+        }
+
+        .navLink {
+            background-color: papayawhip;
+flex-grow: 4;
+        }
+
+        .article {
+            background-color: lemonchiffon;
+        }
+
+        .articleHeader {
+            background-color: blanchedalmond;
+        }
+
+        .articleContent {
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="siteContent">
+        <div id="header">Boxes in Boxes</div>
+        <div id="navBar">
+            <div class="navLink">Link</div>
+            <div class="navLink">Link</div>
+            <div class="navLink">Link</div>
+        </div>
+        <div class="article">
+            <div class="articleHeader">
+                <h2>Article</h2>
+            </div>
+            <div class="articleContent">
+                <p>Add text here!</p>
+            </div>
+        </div>
+        <div class="article">
+            <div class="articleHeader">
+                <h2>Article</h2>
+            </div>
+            <div class="articleContent">
+                <p>Add text here!</p>
+            </div>
+        </div>
+</body>
+
+</html>
